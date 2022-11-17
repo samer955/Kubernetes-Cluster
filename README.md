@@ -133,6 +133,24 @@ Update and refresh Ubuntu repository and package index:
 
 `sudo apt update`
 
+Install kubelet, kubeadm, kubectl:
+
+`sudo apt install kubelet kubeadm kubectl`
+
+`sudo apt-mark hold kubelet kubeadm kubectl`
+
+## Initializing Kubernetes Control Plane
+
+`sudo kubeadm init --apiserver-advertise-address=192.168.56.15 --pod-network-cidr=192.168.0.0/16 --cri-socket unix:///run/cri-dockerd.sock`
+
+Setup Kubernetes credentials:
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+
 
 
 
