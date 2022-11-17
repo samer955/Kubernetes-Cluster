@@ -98,9 +98,11 @@ tar xvf cri-dockerd-${VER}.amd64.tgz
 ```
 
 Move cri-dockerd binary package to /usr/local/bin directory:
+
 `sudo mv cri-dockerd/cri-dockerd /usr/local/bin/`
 
 Validate installation:
+
 `cri-dockerd --version`
 
 Configure systemd units for cri-dockerd:
