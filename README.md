@@ -38,7 +38,8 @@ To apply the changes without reboot:
 
 To disable SWAP:
 `sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab`
-Turn off the SWAP on the current session
+
+Turn off the SWAP on the current session:
 ```
 sudo swapoff -a
 free -m
