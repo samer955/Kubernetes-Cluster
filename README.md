@@ -118,6 +118,18 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
+## Installing Kubernetes Package
+
+`sudo apt install apt-transport-https ca-certificates curl -y`
+
+Add the Kubernetes repository and GPG key:
+```
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+```
+Update and refresh Ubuntu repository and package index:
+
+`sudo apt update`
 
 
 
