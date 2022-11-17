@@ -170,6 +170,10 @@ If you forget the join command, run this command in the master node and paste th
 
 `kubeadm token create --print-join-command`
 
+Run `kubectl get nodes` in the master node to visualize the nodes.
+
+
+
 
 
 
