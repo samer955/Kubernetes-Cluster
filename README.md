@@ -162,8 +162,8 @@ After initializing the Kubernetes Control Plane on the "cplane1" server, you wil
 Copy the join command in the worker node:
 
 ```
-kubeadm join 192.168.56.15:6443 --token po3sb1.oux4z76nwb0veuna \
---discovery-token-ca-cert-hash sha256:f5068150fabaf85f3d04e19a395c60d19298ba441e2d9391e20df3267ea6cd28
+sudo kubeadm join 192.168.56.15:6443 --token po3sb1.oux4z76nwb0veuna \
+--discovery-token-ca-cert-hash sha256:f5068150fabaf85f3d04e19a395c60d19298ba441e2d9391e20df3267ea6cd28 --cri-socket unix:///run/cri-dockerd.sock 
 ```
 
 If you forget the join command, run this command in the master node and paste the output in the worker nodes:
