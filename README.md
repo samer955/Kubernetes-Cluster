@@ -10,3 +10,20 @@ Modify the /etc/hosts with `sudo nano /etc/hosts` so that each hostname is point
 192.168.5.25 worker1
 192.168.5.26 worker2`
 ````
+
+## Enable Kernel Modules and Disable SWAP
+
+Enable the kernel modules "overlay" and "br_netfilter".
+```
+sudo modprobe overlay
+sudo modprobe br_netfilter
+```
+To make it permanent:
+```
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+```
+
+
