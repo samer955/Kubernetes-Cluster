@@ -46,7 +46,7 @@ free -m
 ```
 SWAP should now have the value 0.
 
-## Install Container runtime (Master and Worker nodes)
+## Install Container runtime (Master and Worker nodes). (Docker will be used in this tutorial)
 
 Add repo and Install packages:
 ```
