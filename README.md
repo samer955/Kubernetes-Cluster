@@ -35,6 +35,7 @@ EOF
 ```
 To apply the changes without reboot:
 `sudo sysctl --system`
+
 To disable SWAP:
 `sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab`
 Turn off the SWAP on the current session
