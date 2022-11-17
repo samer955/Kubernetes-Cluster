@@ -25,5 +25,23 @@ overlay
 br_netfilter
 EOF
 ```
+Create the systemctl params required:
+```
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-iptables  = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward                 = 1
+EOF
+```
+To apply the changes without reboot:
+`sudo sysctl --system`
+To disable SWAP:
+`sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab`
+Turn off the SWAP on the current session
+```
+sudo swapoff -a
+free -m
+```
+SWAP should now have the value 0.
 
 
