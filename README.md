@@ -172,11 +172,13 @@ If you forget the join command, run this command in the master node and paste th
 
 Run `kubectl get nodes` in the master node to visualize the nodes.
 
-### Source
+### Sources
 
-[https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/]
-[https://www.howtoforge.com/how-to-setup-kubernetes-cluster-with-kubeadm-on-ubuntu-22-04/]
-[https://computingforgeeks.com/install-kubernetes-cluster-ubuntu-jammy/]
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
+https://www.howtoforge.com/how-to-setup-kubernetes-cluster-with-kubeadm-on-ubuntu-22-04/
+
+https://computingforgeeks.com/install-kubernetes-cluster-ubuntu-jammy/
 
 
 
